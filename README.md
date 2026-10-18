@@ -18,8 +18,8 @@ I regularly practice LeetCode problems to strengthen my programming skills and p
 - **Language:** C++
 
 ## 🤝 Connect With Me
-- **GitHub:** [Your GitHub Profile](https://github.com/your-username)
-- **LeetCode:** [Your LeetCode Profile](https://leetcode.com/your-username/)
+- **GitHub:** [GitHub Link](https://github.com/rutikshinde28)
+- **LeetCode:** [LeetCode Link](https://leetcode.com/u/_rutik_28/)
 
 ---
 
