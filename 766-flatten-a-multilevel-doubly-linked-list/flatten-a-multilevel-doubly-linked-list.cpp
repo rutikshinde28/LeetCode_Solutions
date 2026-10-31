@@ -12,13 +12,13 @@ public:
 class Solution {
 public:
     Node* flatten(Node* head) {
+        Node* curr = head;
         if(head == NULL){
             return head;
         }
-        Node* curr = head;
         while(curr != NULL){
             if(curr->child != NULL){
-                //flatten the child nodes
+                //flatten
                 Node* next = curr->next;
                 curr->next = flatten(curr->child);
 
