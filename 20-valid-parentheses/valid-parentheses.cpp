@@ -1,13 +1,13 @@
 class Solution {
 public:
     bool isValid(string str) {
-        stack<int> st;
+        stack<char> st;
 
         for(int i = 0 ; i<str.size() ; i++){
-            if(str[i] =='(' || str[i] == '[' || str[i] == '{'){ //opening
+            if(str[i] == '(' || str[i] == '[' || str[i] == '{'){
                 st.push(str[i]);
             }
-            else{                    //closing
+            else{
                 if(st.size() == 0){
                     return false;
                 }
@@ -17,7 +17,7 @@ public:
                 st.top() == '{' && str[i] == '}'){
                     st.pop();
                 }
-                else{   //no match
+                else{
                     return false;
                 }
             }
