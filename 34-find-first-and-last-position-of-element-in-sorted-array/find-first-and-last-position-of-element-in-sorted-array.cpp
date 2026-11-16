@@ -1,44 +1,16 @@
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
-        int first = -1;
-        int last = -1;
+        int n = nums.size();
+        if(n == 0) return {-1,-1};
 
-        int start = 0;
-        int end = nums.size()-1;
-
-        while(start <= end){
-            int mid = start + (end-start)/2;
-
-            if(nums[mid] == target){
-                first = mid;
-                end = mid-1;
-            }
-            else if(nums[mid] < target){
-                start = mid+1;
-            }
-            else{
-                end = mid - 1;
-            }
+        int lb = lower_bound(nums.begin(),nums.end(),target) - nums.begin();
+        int ub = upper_bound(nums.begin(),nums.end(),target) - nums.begin();
+        if(lb == ub){
+            return {-1,-1};
         }
-
-        start = 0;
-        end = nums.size()-1;
-
-        while(start <= end){
-            int mid = start + (end-start)/2;
-
-            if(nums[mid] == target){
-                last = mid;
-                start = mid+1;
-            }
-            else if(nums[mid] < target){
-                start = mid+1;
-            }
-            else{
-                end = mid - 1;
-            }
+        else{
+            return {lb, ub-1};
         }
-        return {first,last};
     }
 };
